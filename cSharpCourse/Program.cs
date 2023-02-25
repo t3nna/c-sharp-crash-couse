@@ -20,10 +20,13 @@ namespace cSharpCourse
            //
            // LeetCode.ConcatenationOfArray(nums);
             //ElemConvert.doConvert();
-            TasksForClass.MeasureDistance();
+            // TasksForClass.MeasureDistance();
             // IfElse.doIf();
             //MultipleDeclaration.doDeclaration();
             // ElemConvert.doConvert();
+            // Loops.While.SeatsInPlane();
+            // Tasks.Game.Pacman();
+            Scope.doScope();
         }
          
             //HandlingErrors.handlingErrors();

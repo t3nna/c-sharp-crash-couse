@@ -13,7 +13,8 @@ public class ElemConvert
         Console.WriteLine(c );
         
         // c = (7 + 4) / Convert.ToSingle(2);
-        bool inBoolean = Convert.ToBoolean(null);
+        bool inBoolean = Convert.ToBoolean(5);
+        Console.WriteLine();
 
         int age = Convert.ToInt32(Console.ReadLine());
 
