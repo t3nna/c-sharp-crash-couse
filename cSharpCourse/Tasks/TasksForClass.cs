@@ -119,47 +119,70 @@ public static class TasksForClass
 
     public static void CurrencyConverter()
     {
-        float plnInWallet, dollarsInWallet;
+       float plnInWallet, dollarsInWallet;
 
-        float plnToUsd = 4.4f, usdToPln = 4.6f;
+            float plnToUsd = 4.5f, usdToPln = 4.65f;
 
-        float exchangeCurrencyCount;
-        string desiredOperation;
+            float exchangeCurrencyCount;
 
-        Console.WriteLine("Welcome to Currency Converter");
+            Console.WriteLine("Welcome to Currency Converter");
 
-        Console.WriteLine("Enter your balance in PLN");
-        plnInWallet = Convert.ToSingle(Console.ReadLine());
-        Console.WriteLine("Enter your balance in USD");
-        dollarsInWallet = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter your balance PLN");
+            plnInWallet = Convert.ToSingle(Console.ReadLine());
+            
+            Console.WriteLine("Enter your balance USD");
+            dollarsInWallet = Convert.ToSingle(Console.ReadLine());
 
+            // Выбираем вариант
+            Console.WriteLine("Select operation");
+            Console.WriteLine("1 - pln to usd");
+            Console.WriteLine("2 - usd to pln");
 
-        Console.WriteLine("Select operation");
-        Console.WriteLine("1 - pln to usd");
-        Console.WriteLine("2 - usd to pln");
-        desiredOperation = Console.ReadLine();
+            string desiredOperation; //желаймая операция
+            desiredOperation = Console.ReadLine();
 
-        if (desiredOperation=="1")
-        {
-            Console.WriteLine("PLN to UDS");
-            Console.WriteLine("How much do you want to exchange?");
-            exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
-            if (plnInWallet >= exchangeCurrencyCount)
+            // выбираем операцию 1
+            if (desiredOperation == "1")
             {
-                plnInWallet -= exchangeCurrencyCount;
-                dollarsInWallet += exchangeCurrencyCount / plnToUsd;
+                Console.WriteLine("PLN to USD");
+                Console.WriteLine("How much do you want to exchange?");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine()); 
+                
+                if (plnInWallet >= exchangeCurrencyCount)
+                {
+                    plnInWallet -= exchangeCurrencyCount;
+                    dollarsInWallet += exchangeCurrencyCount / plnToUsd;
+                }
+                // написать обработчик ошибок 
+            }
+            
+            else if (desiredOperation == "2")
+            {
+                Console.WriteLine("USD to PLN");
+                Console.WriteLine("How much do you want to exchange?");
+                exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
+                
+                if (dollarsInWallet >= exchangeCurrencyCount)
+                {
+                    dollarsInWallet -= exchangeCurrencyCount;
+                    plnInWallet += exchangeCurrencyCount * usdToPln;
+                }
+                
+                // написать обработчик ошибок
                 
             }
             
-            }
-        else if (desiredOperation == "2")
-        {
+            // написать обработчик ошибок (если пользователь введет неправильную операцию)
             
-        }
+            
+            // Дополнительно!!!!!
+            // написать 3ю операцию:
+            // если выбираем варинт 3 тогда мы кладем деньги на депозит под 15 %
+            // вывести не экран сумму через год(доллары и злотые)
+            
 
-        Console.WriteLine(plnInWallet);
-        Console.WriteLine(dollarsInWallet);
-
+            Console.WriteLine(plnInWallet);
+            Console.WriteLine(dollarsInWallet);
 
     }  
 }
