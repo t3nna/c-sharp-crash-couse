@@ -95,6 +95,28 @@ public static class TasksForClass
 
     }
 
+    public static void PasswordCheckLoop()
+    {
+        int triesCount = 5;
+        string password = "1234";
+        string userInput;
+
+        for (int i = 0; i < triesCount; i++)
+        {
+            Console.WriteLine("Enter Password");
+            userInput = Console.ReadLine();
+            if (userInput == password)
+            {
+                Console.WriteLine("My Gold");
+            }
+            else
+            {
+                Console.WriteLine("Password is not correct");
+                Console.WriteLine("You have " + (triesCount - i - 1) + "tries");
+            }
+        }
+    }
+
     public static void CurrencyConverter()
     {
         float plnInWallet, dollarsInWallet;

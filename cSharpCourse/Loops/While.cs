@@ -9,7 +9,8 @@ public static class While
         Console.Write("Enter Your age: ");
 
         age = Convert.ToInt32(Console.ReadLine());
-
+        // итерация - одно выполнение цыкла 
+        // цикл с условием 
         while (age-- > 0)
         {
             if (age==8)
