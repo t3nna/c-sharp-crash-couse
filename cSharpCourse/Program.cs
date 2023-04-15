@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Threading.Channels;
+using cSharpCourse.Loops;
 using cSharpCourse.Tasks;
 
 namespace cSharpCourse
@@ -8,61 +10,82 @@ namespace cSharpCourse
     {
         static void Main(string[] args)
         {
-           /* //Strings.Concat.Combine();
-            int[] nums = { 1, 2, 3, 4, 5, 6 };
-            int n = 3;
-            int[] res = LeetCode.shuffleTheArray(nums, n);
-            for (int i = 0; i < res.Length; i++)
-            {
-                Console.WriteLine(res[i]);
-            }*/
-           // int[] nums = {2,7,11,15 }; 
-           //
-           // LeetCode.ConcatenationOfArray(nums);
-            //ElemConvert.doConvert();
-            // TasksForClass.MeasureDistance();
-            // IfElse.doIf();
-            //MultipleDeclaration.doDeclaration();
-                //ElemConvert.doConvert();
-            //Loops.While.SeatsInPlane();
-            // Tasks.Game.Pacman();();
-            // Functions.Basics.doFunction();
-            // IncremDecrem.doOperators();
-            // Game.Pacman();
-            
-            // Console.WriteLine("Сколько их там?");
-            // int ninjas = Convert.ToInt32(Console.ReadLine());
-            // if (ninjas < 10 && ninjas>=0)
-            //     Console.WriteLine("Я одолею этих ниндзя!");
-            // else if (ninjas < 30)
-            //     Console.WriteLine("Будет непросто, но я с ними разделаюсь");
-            // else if (ninjas >= 30)
-            //     Console.WriteLine("Их слишком много");
-            // Console.ReadKey();
-
-            // Console.WriteLine("введите число");
-            // float number = Convert.ToSingle(Console.ReadLine());
-            // bool answer = ((5 < number) || (10 > number));
-            // Console.WriteLine(answer);
-            // if (answer)
-            //     Console.WriteLine("число больше 5 и меньше 10");
-            // else
-            //     Console.WriteLine("неизвестное число");
+            // int triesCount = 5;
+            // string password = "1234";
+            // string userInput;
             //
-            // bool is_leap(int year) {
-            //     return 
-            //         (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+            // for (int i = 0; i < triesCount; i++)
+            // {
+            //     Console.WriteLine("Enter Password");
+            //     userInput = Console.ReadLine();
+            //     if (userInput == password)
+            //     {
+            //         Console.WriteLine("My Gold!");
+            //         break;
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine("Password is not correct");
+            //         Console.WriteLine("You have " + (triesCount - i - 1) + "tries");
+            //     }
             // }
-            
-            //RefOut.doRefOut();
-            //Collections.List.doList();
-            
-            //Collections.Queue.doQueue();
-            //Collections.Stack.doStack();
-            Collections.Dictionary.doDictionary();
+
+
+
+
+            //
+            // string password = "1234";
+            // string userInput;
+            // bool checker = true;
+            // while (true)
+            // {
+            //     userInput = Console.ReadLine();
+            //     
+            //     if (password == userInput)
+            //     {
+            //         break;
+            //     }
+            //
+            //     Console.WriteLine("Password is not correct");
+            // }
+            //
+            // Console.WriteLine("You are in the system");
+            //
+
+
+
+
+           //ForLoop.doTree(); 
+           int n;
+
+           Console.WriteLine("enter number");
+           n = Convert.ToInt32(Console.ReadLine());
+           int a = 0;
+           int b = 1;
+           int c = 0;
+
+           Console.WriteLine(a);
+           Console.WriteLine(b);
+           for (int i = 2; i < n; i++)
+           {
+               Console.WriteLine(a + b);
+               c = b; 
+               b += a;
+               a = c;
+           }
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
-         
-            //HandlingErrors.handlingErrors();
-        }
+    }
 }
