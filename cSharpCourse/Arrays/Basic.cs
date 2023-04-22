@@ -11,6 +11,15 @@ public static class Basic
         friends[0] = "Tom";
         friends[1] = "Jim";
 
+        Random rand = new Random();
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = rand.Next(0, 101);
+            Console.WriteLine(numbers[i]);
+
+        }
+
         Console.WriteLine(friends.Length);
         // 2d Array
         int[,] numberGrid =

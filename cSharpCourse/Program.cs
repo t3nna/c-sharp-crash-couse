@@ -53,39 +53,59 @@ namespace cSharpCourse
             //
 
 
+            int a;
+            int b;
+            int c;
+            while (true)
+            {
+                Console.WriteLine("Enter numbers");
+                a = Convert.ToInt32(Console.ReadLine());
+                b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter operation");
+                Console.WriteLine("+ - amount");
+                Console.WriteLine("- - difference");
+                Console.WriteLine("* - multiplication");
+                Console.WriteLine("/ - division");
+                Console.WriteLine("0 - end program");
+                string operation = Console.ReadLine();
+                if (operation == "+")
+                {
+                    c = a + b;
+                    Console.WriteLine($"{c}");
+                }
+                else if (operation == "-")
+                {
+                    c = a - b;
+                    Console.WriteLine($"{c}");
+                }
+                else if (operation == "*")
+                {
+                    c = a * b;
+                    Console.WriteLine($"{c}");
+                }
+                else if (operation == "/")
+                {
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Error");
+                    }
+                    else
+                    {
+                        c = a / b;
+                        Console.WriteLine($"{c}");
+                    }
+                }
+                else if (operation == "0")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Error");
+                }
 
 
-           //ForLoop.doTree(); 
-           int n;
-
-           Console.WriteLine("enter number");
-           n = Convert.ToInt32(Console.ReadLine());
-           int a = 0;
-           int b = 1;
-           int c = 0;
-
-           Console.WriteLine(a);
-           Console.WriteLine(b);
-           for (int i = 2; i < n; i++)
-           {
-               Console.WriteLine(a + b);
-               c = b; 
-               b += a;
-               a = c;
-           }
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
         }
     }
 }

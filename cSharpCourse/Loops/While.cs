@@ -26,30 +26,40 @@ public static class While
     {
         int playerHealth = 100;
         int playerDamage = 10;
-        int enemyHealth = 50;
-        int enemyDamage = 15;
+        
+        int enemyHealth = 100;
+        int enemyDamage = 10;
 
+        decimal playerArmor, enemyArmor;
+        
         while (playerHealth > 0 && enemyHealth > 0)
         {
             playerHealth -= enemyDamage;
             enemyHealth -= playerDamage;
 
-            Console.WriteLine(playerHealth + "player");
+            Console.WriteLine(playerHealth + " player");
             Console.WriteLine(enemyHealth + " enemy");
+            
+            
         }
 
-        if (playerHealth <= 0 && enemyHealth <=0)
+        if (playerHealth <= 0 && enemyHealth <= 0)
         {
-            Console.WriteLine("Ничья."); 
+            Console.WriteLine("Ничья");
         }
-        else if (enemyHealth <= 0)
+        else if ( enemyHealth<=0)
         {
             Console.WriteLine("Победа Игрока");
         }
-        else if (playerHealth <= 0)
+        else if (playerHealth<=0)
         {
-            Console.WriteLine("Победа Врага");
+            Console.WriteLine("Победа врага");
         }
+        
+        
+        
+
+        
     }
 
     public static void SeatsInPlane()
