@@ -52,60 +52,17 @@ namespace cSharpCourse
             // Console.WriteLine("You are in the system");
             //
 
+            int[] arr = new int[7];
 
-            int a;
-            int b;
-            int c;
-            while (true)
+            arr[0] = 15;
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("Enter numbers");
-                a = Convert.ToInt32(Console.ReadLine());
-                b = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter operation");
-                Console.WriteLine("+ - amount");
-                Console.WriteLine("- - difference");
-                Console.WriteLine("* - multiplication");
-                Console.WriteLine("/ - division");
-                Console.WriteLine("0 - end program");
-                string operation = Console.ReadLine();
-                if (operation == "+")
-                {
-                    c = a + b;
-                    Console.WriteLine($"{c}");
-                }
-                else if (operation == "-")
-                {
-                    c = a - b;
-                    Console.WriteLine($"{c}");
-                }
-                else if (operation == "*")
-                {
-                    c = a * b;
-                    Console.WriteLine($"{c}");
-                }
-                else if (operation == "/")
-                {
-                    if (b == 0)
-                    {
-                        Console.WriteLine("Error");
-                    }
-                    else
-                    {
-                        c = a / b;
-                        Console.WriteLine($"{c}");
-                    }
-                }
-                else if (operation == "0")
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Error");
-                }
-
-
+                
             }
+
+
+
         }
+        
     }
 }
