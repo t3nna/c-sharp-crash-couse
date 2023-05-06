@@ -76,6 +76,22 @@ public static class Basic
     }
 
 
+
+
+    public static void SumNegative()
+    {
+        int[] array = { 3, -12, 4, -20};
+        int sum = 0;
+        Console.WriteLine(array[0]);
+        if (array[0] < 0)
+        {
+            
+        }
+            
+        
+    }
+
+
     public static void SeatsInPlane()
     {
         int[] sectors = { 4, 5, 74, 12, 5, 10 };
@@ -91,7 +107,7 @@ public static class Basic
 
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("Registration");
-            Console.WriteLine("\n\n1 - book places\n\n2 - exit from program.\n\n");
+            Console.WriteLine("\n \n 1 - book places\n\n2 - exit from program. \n \n");
             Console.WriteLine("Enter command number: ");
 
             // convert it to int and give this exercise to the class 
