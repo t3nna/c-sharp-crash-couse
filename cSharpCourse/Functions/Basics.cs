@@ -5,12 +5,23 @@ public static class Basics
     public static void doFunction()
     {
         /*
+        // Default code without funciton
+        //-------------
+        Console.WriteLine("Hello");
+        Console.WriteLine("Are you here?");
+        ConsoleColor defaultColor = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("This is error");
+        Console.ForegroundColor = defaultColor;
+        Console.WriteLine("How are you?");
+        
+        //-------------
+       */ 
         Console.WriteLine("Hallo");
         // text - аргумент
         WriteError("Strange Error", ConsoleColor.Blue);
         Console.WriteLine("Are you here?");
         WriteError("", symbol: '#');
-        */
 
         int sum=0,sum2, x = 1, y = 5;
         
@@ -43,8 +54,14 @@ public static class Basics
         Console.ForegroundColor = defaultColor;
     }
 
-    
-    
+
+
+    static int Sum(int x, int y)
+    {
+        int sum;
+        sum = x + y;
+        return sum;
+    }
     static void Add(ref int sum, int x, int y)
     {
         sum = x + y;
